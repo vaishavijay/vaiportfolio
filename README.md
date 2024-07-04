@@ -1,5 +1,3 @@
 # vaiportfolio
 
-My personal website portfolio! 
-
-Currently in the making 🔧
+My personal website portfolio! [View here](https://vaishavijay.github.io/vaiportfolio/) ❣️
