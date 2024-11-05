@@ -176,10 +176,11 @@ section {
 .profile-background {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1); /* Light shade for background */
+  background-color: rgba(0, 0, 0, 0.15); /* Slightly darker shade for better contrast */
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 /* Text Box Styling */
@@ -187,18 +188,19 @@ section {
   background-color: var(--white);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 60%;
   text-align: center;
+  margin: 1rem; /* Added margin for better spacing */
 }
 
 .section__pic-container {
   display: flex;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
