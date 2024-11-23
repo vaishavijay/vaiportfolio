@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,8 +14,9 @@
       type="image/png"
     />
   </head>
-  <!-- nav -->
-  <nav id="desktop-nav">
+
+   <!-- Nav Bar -->
+   <nav id="desktop-nav">
     <div class="logo">Vaishavi J</div>
     <div>
       <ul class="nav-links">
@@ -41,33 +43,50 @@
       </div>
     </div>
   </nav>
-    <section id="contact">
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-          <p><a href="mailto:jayashankar.v@northeastern.edu">jayashankar.v@northeastern.edu</a></p>
-        </div>
-        <div class="contact-info-container">
-            <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-            <p><a href="https://www.linkedin.com/in/vaishavi-jayashankar-718624209/">LinkedIn</a></p>
-          </div>
-          <div class="contact-info-container">
-            <img src="./assets/github.png" alt="GitHub icon" class="icon contact-icon" />
-            <p><a href="https://github.com/vaishavijay" target="_blank">GitHub</a></p>
-          </div>
-        </div>
-      </section>
-
-
     
+   <!-- General Contact  -->
+  <section id="contact">
+    <h1 class="title">Contact</h1>
+<!-- Contact Form -->
+<div class="contact-form-container">
+    <h2>Send Me a Message!</h2>
+    <form action="https://formspree.io/f/xldewror" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-color-1">Send</button>
+    </form>
+  </div>
 
-
-
-
-
-
-
+    <div class="contact-info-upper-container">
+      <!-- Contact Info Icons -->
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:jayashankar.v@northeastern.edu">jayashankar.v@northeastern.edu</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/vaishavi-jayashankar-718624209/">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/github.png" alt="GitHub icon" class="icon contact-icon" />
+        <p><a href="https://github.com/vaishavijay" target="_blank">GitHub</a></p>
+      </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
       <p>Copyright &#169; 2024 Vaishavi Jayashankar. All Rights Reserved.</p>
