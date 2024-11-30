@@ -48,14 +48,14 @@ img:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45%;
+    height: 60%;
     background-color: #EFE6DD;
     z-index: -1;
     transition: height 0.3s ease-in-out;
 }
 
 .highlighted-text:hover::before {
-    height: 60%;
+    height: 90%;
 }
 
 
@@ -223,7 +223,7 @@ section {
     border: rgb(53, 53, 53) 0.1rem solid;
     background: rgb(245, 245, 245);
     transition: all 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-color-1 {
@@ -270,6 +270,68 @@ section {
     }
 }
 
+/* PHOTO GRID */
+#photo-bar {
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.photo-bar-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Creates a long horizontal layout */
+    grid-auto-rows: minmax(150px, auto); /* Controls the height of rows */
+    gap: 1rem;
+    width: 100%;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Size and placement to achieve the wide bar look */
+.large {
+    grid-column: span 3; /* Large images span more columns to add variety */
+    grid-row: span 1;
+}
+
+.medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .photo-bar-container {
+        grid-template-columns: repeat(4, 1fr); /* Adjust to fit mobile screens */
+    }
+    .large, .medium, .small {
+        grid-column: span 2; /* Span all items to fit on a smaller screen */
+    }
+}
+
+
+
 /* ABOUT SECTION */
 
 #about {
@@ -296,7 +358,6 @@ section {
     flex-direction: column; /* Stack the skills sections vertically */
     align-items: center; /* Center align the skills section within the container */
     gap: 20px;
-    margin-top: 40px;
     max-width: 80vw; /* Consistent width with the about section */
     margin: 0 auto; /* Centers the container */
 }
