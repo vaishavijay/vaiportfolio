@@ -2,14 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-}
-
 body {
     font-family: "Montserrat", sans-serif;
+    max-width: 60vw; /* Reduced width for narrower content area */
+    min-width: 300px; /* Prevents content from becoming too narrow */
+    margin: 0 auto; /* Centers the content */
+    padding: 0 1rem; /* Adds some padding to ensure content doesn't touch edges */
 }
 
 html {
@@ -24,21 +22,44 @@ p {
 
 a,
 .btn {
-    transition: all 300ms ease;
+    transition: all 0.3s ease-in-out;
 }
 
 img {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease-in-out;
+    width: fit-content;
 }
 
 img:hover {
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* DESKTOP NAV */
 
+.highlighted-text {
+    position: relative;
+    display: inline-block;
+}
+
+.highlighted-text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background-color: rgba(220, 202, 232, 0.64);
+    z-index: -1;
+    transition: height 0.3s ease-in-out;
+}
+
+.highlighted-text:hover::before {
+    height: 60%;
+}
+
+
+/* DESKTOP NAV */
 nav,
 .nav-links {
     display: flex;
@@ -59,6 +80,7 @@ nav {
 a {
     color: black;
     text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Add transition for smoother color change */
 }
 
 a:hover {
@@ -70,10 +92,6 @@ a:hover {
 
 .logo {
     font-size: 2rem;
-}
-
-.logo:hover {
-    cursor: default;
 }
 
 /* HAMBURGER MENU */
@@ -147,23 +165,17 @@ a:hover {
 
 section {
     padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+    height: auto;
+    margin: 0 auto;
+    max-width: 80%; /* Ensures sections don't span too wide */
     box-sizing: border-box;
 }
 
-.section-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
 
 /* PROFILE SECTION */
 
 #profile {
     display: flex;
-    justify-content: center;
     gap: 5rem;
     height: 80vh;
 }
@@ -177,28 +189,15 @@ section {
 
 .section__text {
     align-self: center;
-    text-align: center;
 }
 
 .section__text p {
     font-weight: 600;
 }
 
-.section__text__p2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
-
 .title {
     font-size: 3rem;
-    text-align: center;
-}
-
-#socials-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* ICONS */
@@ -212,8 +211,8 @@ section {
 
 .btn-container {
     display: flex;
-    justify-content: center;
     gap: 1rem;
+    padding: 10px;
 }
 
 .btn {
@@ -223,7 +222,6 @@ section {
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     background: rgb(245, 245, 245);
-    text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -276,83 +274,31 @@ section {
 
 #about {
     position: relative;
+    margin: 0 auto;
+    max-width: 80vw; /* Sets a consistent maximum width for the About section */
 }
 
-.about-containers {
+.section-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 2rem;
-    margin: 2rem 0;
-}
-
-.about-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    padding: 0 2rem; /* Adds padding for better spacing from the page edges */
 }
 
 .about-pic {
     border-radius: 2rem;
 }
 
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
-.details-container {
-    padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border: rgb(163, 163, 163) 0.1rem solid;
-    text-align: center;
-}
-
-/* Shared Raised Box Style for Projects and Work Experience */
-
-.raised-box {
-    flex: 1 1 calc(25% - 20px);
-    max-width: 300px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 20px;
-}
-
-.raised-box h2 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.raised-box ul {
-    margin-top: 10px;
-    padding-left: 20px;
-    color: #555;
-}
-
-.raised-box ul li {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
 /* Skills Section */
-
 .skills-container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column; /* Stack the skills sections vertically */
+    align-items: center; /* Center align the skills section within the container */
     gap: 20px;
     margin-top: 40px;
-    flex-wrap: wrap;
+    max-width: 80vw; /* Consistent width with the about section */
+    margin: 0 auto; /* Centers the container */
 }
 
 .skills-box {
@@ -360,11 +306,11 @@ section {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 20px);
-    max-width: 400px;
-    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 100%; /* Makes each skills box fill the width of the skills container */
+    max-width: 80vw; /* Matches the width with the About section */
+    box-sizing: border-box;
 }
 
 .skills-box h2 {
@@ -381,44 +327,17 @@ section {
     margin: 5px 0;
 }
 
-.skills-list p {
-    margin: 5px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.skills-list p::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #000000;
-    font-size: 1rem;
-}
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    .skills-container {
+        max-width: 90vw;
+    }
+
     .skills-box {
-        width: 100%;
+        max-width: 90vw;
     }
 }
 
-/* Specific Styling for Buttons (if applicable) */
-
-.raised-box button {
-    align-self: center;
-    margin-top: auto;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.raised-box button:hover {
-    background-color: #555;
-}
 
 /* CONTACT */
 
@@ -602,11 +521,6 @@ footer p {
     text-align: center;
     height: 80vh;
     margin: auto;
-}
-
-#error-page .title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 #error-page .text-container p {
