@@ -4,10 +4,10 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    max-width: 60vw; /* Reduced width for narrower content area */
-    min-width: 300px; /* Prevents content from becoming too narrow */
-    margin: 0 auto; /* Centers the content */
-    padding: 0 1rem; /* Adds some padding to ensure content doesn't touch edges */
+    max-width: 60vw;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 html {
@@ -80,7 +80,7 @@ nav {
 a {
     color: black;
     text-decoration: none;
-    transition: color 0.3s ease-in-out; /* Add transition for smoother color change */
+    transition: color 0.3s ease-in-out;
 }
 
 a:hover {
@@ -167,7 +167,7 @@ section {
     padding-top: 4vh;
     height: auto;
     margin: 0 auto;
-    max-width: 80%; /* Ensures sections don't span too wide */
+    max-width: 80%;
     box-sizing: border-box;
 }
 
@@ -270,65 +270,65 @@ section {
     }
 }
 
-/* PHOTO GRID */
-#photo-bar {
-    margin-top: 2rem;
-    padding: 1rem;
-    width: 100%;
-    overflow: hidden;
-}
+/*!* PHOTO GRID *!*/
+/*#photo-bar {*/
+/*    margin-top: 2rem;*/
+/*    padding: 1rem;*/
+/*    width: 100%;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.photo-bar-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Creates a long horizontal layout */
-    grid-auto-rows: minmax(150px, auto); /* Controls the height of rows */
-    gap: 1rem;
-    width: 100%;
-}
+/*.photo-bar-container {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(12, 1fr);*/
+/*    grid-auto-rows: minmax(150px, auto);*/
+/*    gap: 1rem;*/
+/*    width: 100%;*/
+/*}*/
 
-.photo-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+/*.photo-item {*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-}
+/*.photo-item img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*    transition: transform 0.3s ease-in-out;*/
+/*}*/
 
-.photo-item img:hover {
-    transform: scale(1.05);
-}
+/*.photo-item img:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
 
-/* Size and placement to achieve the wide bar look */
-.large {
-    grid-column: span 3; /* Large images span more columns to add variety */
-    grid-row: span 1;
-}
+/*!* Size and placement to achieve the wide bar look *!*/
+/*.large {*/
+/*    grid-column: span 3*/
+/*    grid-row: span 1;*/
+/*}*/
 
-.medium {
-    grid-column: span 2;
-    grid-row: span 1;
-}
+/*.medium {*/
+/*    grid-column: span 2;*/
+/*    grid-row: span 1;*/
+/*}*/
 
-.small {
-    grid-column: span 1;
-    grid-row: span 1;
-}
+/*.small {*/
+/*    grid-column: span 1;*/
+/*    grid-row: span 1;*/
+/*}*/
 
-/* Media Query for Responsiveness */
-@media (max-width: 768px) {
-    .photo-bar-container {
-        grid-template-columns: repeat(4, 1fr); /* Adjust to fit mobile screens */
-    }
-    .large, .medium, .small {
-        grid-column: span 2; /* Span all items to fit on a smaller screen */
-    }
-}
+/*!* Media Query for Responsiveness *!*/
+/*@media (max-width: 768px) {*/
+/*    .photo-bar-container {*/
+/*        grid-template-columns: repeat(4, 1fr);*/
+/*    }*/
+/*    .large, .medium, .small {*/
+/*        grid-column: span 2;*/
+/*    }*/
+/*}*/
 
 
 
@@ -337,7 +337,7 @@ section {
 #about {
     position: relative;
     margin: 0 auto;
-    max-width: 80vw; /* Sets a consistent maximum width for the About section */
+    max-width: 80vw;
 }
 
 .section-container {
@@ -345,7 +345,7 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 0 2rem; /* Adds padding for better spacing from the page edges */
+    padding: 0 2rem;
 }
 
 .about-pic {
@@ -355,11 +355,11 @@ section {
 /* Skills Section */
 .skills-container {
     display: flex;
-    flex-direction: column; /* Stack the skills sections vertically */
-    align-items: center; /* Center align the skills section within the container */
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    max-width: 80vw; /* Consistent width with the about section */
-    margin: 0 auto; /* Centers the container */
+    max-width: 80vw;
+    margin: 0 auto;
 }
 
 .skills-box {
@@ -369,8 +369,8 @@ section {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 100%; /* Makes each skills box fill the width of the skills container */
-    max-width: 80vw; /* Matches the width with the About section */
+    width: 100%;
+    max-width: 80vw;
     box-sizing: border-box;
 }
 
