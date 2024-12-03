@@ -464,6 +464,7 @@ footer p {
     align-items: flex-start;
     margin-bottom: 30px;
     position: relative;
+
 }
 
 .timeline-dot {
@@ -474,6 +475,7 @@ footer p {
     height: 20px;
     background-color: #333;
     border-radius: 50%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .timeline-item::before {
@@ -502,6 +504,8 @@ footer p {
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .timeline-content h2 {
@@ -518,6 +522,33 @@ footer p {
 .timeline-content ul li {
     list-style-type: circle;
 }
+.timeline-content img.experience-icon {
+    width: 40px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content img.experience-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .timeline-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .timeline-content img.experience-icon {
+        width: 30px; /* Further reduce size on smaller screens */
+        margin-right: 10px; /* Add spacing between icon and text */
+    }
+
+    .timeline-content h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+}
+
 
 /* CONTACT FORM  */
 .contact-form-container {
