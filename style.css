@@ -226,13 +226,13 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn-color-1 {
+.btn-color-1 {/*contact(black)*/
     background: #7A7A7A;
     border: rgb(248, 248, 248) 0.1rem solid;
     color: rgb(255, 255, 253);
 }
 
-.btn-color-2 {
+.btn-color-2 { /*resume(white)*/
     background: rgb(255, 255, 255);
     border: rgb(248, 248, 248) 0.1rem solid;
 }
